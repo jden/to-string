@@ -5,7 +5,8 @@ stringify
 
     var toString = require('to-string')
 
-## api
+    toString(maybeAValue)
+    // => String
 
 
 ## installation
