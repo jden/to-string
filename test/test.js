@@ -1,9 +1,10 @@
 var chai = require('chai')
 chai.should()
+var expect = chai.expect
 
 describe('to-string', function () {
   var toString = require('../')
-  
+
   it('examples', function () {
     toString('sdfsf').should.equal('sdfsf')
     toString(9).should.equal('9')
@@ -15,4 +16,12 @@ describe('to-string', function () {
     toString({}).should.equal('[object Object]')
     toString({toString: function () { return 'foo'}}).should.equal('foo')
   })
+
+  describe('.orUndefined', function () {
+    it('is a noOp on undefined', function () {
+      expect(toString.orUndefined()).to.equal(undefined)
+      toString.orUndefined('').should.equal('')
+    })
+  })
+
 })

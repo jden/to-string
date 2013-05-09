@@ -8,6 +8,12 @@ stringify
     toString(maybeAValue)
     // => String
 
+    toStringOrUndefined(4)
+    // => '4'
+
+    toString.orUndefined(undefined)
+    // => undefined
+
 
 ## installation
 
